@@ -28,6 +28,9 @@ test('TextMate grammar handles multiline comments, strings, builtins, results an
   for (const word of ['module', 'use', 'export']) {
     assert(tokens(word + ' math').some(t => t.text === word && t.scopes.includes('keyword.control')));
   }
+  for (const word of ['and', 'or', 'not']) {
+    assert(tokens(`show a ${word} b`).some(t => t.text === word && t.scopes.includes('keyword.operator.logical')));
+  }
   assert(tokens('export record Point {').some(t => t.text === 'Point' && t.scopes.includes('entity.name.type')));
   for (const name of ['length', 'read_file', 'try_read_file', 'write_file', 'try_write_file']) {
     assert(tokens(`show ${name}(text)`).some(t => t.text === name && t.scopes.includes('support.function.builtin')));

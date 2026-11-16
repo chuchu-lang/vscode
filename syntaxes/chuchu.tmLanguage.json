@@ -36,6 +36,10 @@
       "match": "\\b(?:assign|declare|as|show|reassign|if|else|while|function|be|return|err|record|module|use|export)\\b"
     },
     {
+      "name": "keyword.operator.logical.chuchu",
+      "match": "\\b(?:and|or|not)\\b"
+    },
+    {
       "name": "constant.language.boolean.chuchu",
       "match": "\\b(?:true|false)\\b"
     },

@@ -1,4 +1,4 @@
-export const keywords = ['assign', 'declare', 'as', 'reassign', 'show', 'if', 'else', 'while', 'function', 'be', 'return', 'err', 'record', 'module', 'use', 'export', 'true', 'false'];
+export const keywords = ['assign', 'declare', 'as', 'reassign', 'show', 'if', 'else', 'while', 'function', 'be', 'return', 'err', 'record', 'module', 'use', 'export', 'and', 'or', 'not', 'true', 'false'];
 export const types = ['int', 'float', 'bool', 'string', 'result'];
 export interface Callable { name: string; parameters: string[]; result: string; description: string; optional?: boolean }
 const builtin = (name: string, parameters: string[], result: string, description: string, optional = false): Callable => ({ name, parameters, result, description, optional });
@@ -42,6 +42,9 @@ export const keywordHelp: Record<string, string> = {
   if: 'Conditional block: if condition { ... } else { ... }. The condition must be bool.',
   else: 'Alternative branch of an if statement.',
   while: 'Repeat a block while a bool condition holds.',
+  and: 'Logical and: a and b. Both operands must be bool. Short-circuits: b is skipped when a is false.',
+  or: 'Logical or: a or b. Both operands must be bool. Short-circuits: b is skipped when a is true. Binds looser than and.',
+  not: 'Logical not: not a. The operand must be bool. Binds looser than comparisons: not a < b is not (a < b).',
   int: 'Signed 64-bit integer. Arithmetic overflow is checked.',
   float: '64-bit floating point. Integer-to-float widening is supported.',
   bool: 'Boolean: true or false.',

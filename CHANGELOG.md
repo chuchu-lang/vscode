@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.7
+
+- Support the logical operators `and`, `or`, and `not`: syntax highlighting, keyword hover and completion.
+
 ## 0.1.6
 
 - Support the new `declare name` statement: syntax highlighting, keyword hover and completion, a snippet, and editor symbol tracking so later uses are not reported as undefined.
