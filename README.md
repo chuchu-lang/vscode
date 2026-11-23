@@ -2,7 +2,7 @@
 
 # Chuchu Language for VS Code
 
-Language support for [Chuchu](https://github.com/chuchu-lang/chuchu-core), built against compiler main, including records, modules/imports, dot access, and file I/O. Requires VS Code 1.96 or newer.
+Language support for [Chuchu](https://github.com/chuchu-lang/core), built against compiler main, including records, modules/imports, dot access, and file I/O. Requires VS Code 1.96 or newer.
 
 ## Features
 
@@ -32,9 +32,9 @@ Open any `.chuchu` file. See [examples/features.chuchu](examples/features.chuchu
 
 ## Build a program
 
-Build [Cheeku from source with its host toolchain](https://github.com/chuchu-lang/chuchu-core#native-build-and-platform-status). The compiler does not need a published release; point the extension at the executable produced by your local build.
+Build [Cheeku from source with its host toolchain](https://github.com/chuchu-lang/core#native-build-and-platform-status). The compiler does not need a published release; point the extension at the executable produced by your local build.
 
-For sibling checkouts of `chuchu-core` and `chuchu-vscode`, opening `chuchu-vscode` in VS Code uses the checked-in `.vscode/settings.json`:
+For sibling checkouts of `core` and `vscode`, opening `vscode` in VS Code uses the checked-in `.vscode/settings.json`:
 
 ```json
 {
@@ -51,7 +51,7 @@ Open a saved `.chuchu` file and use the editor's build button or the Command Pal
 - **Chuchu: Build Current File** compiles with `-O2`.
 - **Chuchu: Build Current File for Debugging** compiles with `--debug` (O0 and native debug information).
 
-The command saves pending edits and writes the executable to `.chuchu/build/<source-name>` beside the source file, with a `-debug` suffix for debug builds and `.exe` on Windows. Add `.chuchu/` to your project's `.gitignore`. The terminal shows compiler output; located compiler errors also appear in Problems. Run the compiled executable in your terminal. Native debugging requires an appropriate debugger extension and launch configuration; see [Chuchu's debugging guide](https://github.com/chuchu-lang/chuchu-core/blob/main/DEBUGGING.md).
+The command saves pending edits and writes the executable to `.chuchu/build/<source-name>` beside the source file, with a `-debug` suffix for debug builds and `.exe` on Windows. Add `.chuchu/` to your project's `.gitignore`. The terminal shows compiler output; located compiler errors also appear in Problems. Run the compiled executable in your terminal. Native debugging requires an appropriate debugger extension and launch configuration; see [Chuchu's debugging guide](https://github.com/chuchu-lang/core/blob/main/DEBUGGING.md).
 
 Build commands require a trusted workspace and a local filesystem. Editing features are available in Restricted Mode and virtual workspaces. Compiler execution uses a process task with separate arguments, so file paths are passed directly without shell interpolation.
 
