@@ -103,7 +103,7 @@ test('completion at EOF retains the scope of unfinished blocks', () => {
 test('dot access accepts the compiler module example without hiding other invalid characters', () => {
   const fs = require('node:fs');
   const path = require('node:path');
-  const example = path.join(__dirname, '../../chuchu-core/examples/modules/main.chuchu');
+  const example = path.join(__dirname, '../../core/examples/modules/main.chuchu');
   const source = fs.existsSync(example) ? fs.readFileSync(example, 'utf8') :
     'use module math\nshow math.add(2, 3)\nassign origin as math.Point {\n x: 0\n y: 0\n}\nshow origin.x';
   assert.deepEqual(analyze(source).issues, []);

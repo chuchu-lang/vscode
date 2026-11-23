@@ -38,11 +38,11 @@ For sibling checkouts of `chuchu-core` and `chuchu-vscode`, opening `chuchu-vsco
 
 ```json
 {
-  "chuchu.compilerPath": "../chuchu-core/target/release/cheeku"
+  "chuchu.compilerPath": "../core/target/release/cheeku"
 }
 ```
 
-When opening the parent `chuchu-org` folder instead, set `chuchu.compilerPath` to `./chuchu-core/target/release/cheeku` in that folder's `.vscode/settings.json`. For a different workspace or a standalone file, use the absolute path to your local compiler. To use a debug compiler build, replace `target/release` with `target/debug`. A release compiler can produce both normal and debug programs.
+When opening the parent `chuchu-org` folder instead, set `chuchu.compilerPath` to `./core/target/release/cheeku` in that folder's `.vscode/settings.json`. For a different workspace or a standalone file, use the absolute path to your local compiler. To use a debug compiler build, replace `target/release` with `target/debug`. A release compiler can produce both normal and debug programs.
 
 On Windows, append `.exe` to the compiler filename, or use an escaped path such as `"C:\\tools\\cheeku.exe"`. Supply only the executable path, without surrounding shell quotes or extra arguments. Paths containing directories are resolved relative to the file's workspace folder, or its source directory when no workspace folder is open. A bare name is resolved through PATH.
 
